@@ -1,5 +1,4 @@
 import express from "express"
-import fs from 'node:fs/promises'
 import dotenv from "dotenv"
 import path from "node:path"
 import { fileURLToPath } from "node:url"
@@ -25,7 +24,7 @@ export default () => {
     app.use(express.json())
     app.use(cors())
 
-    app.use("/", loginRouter)
+    app.use("/okay", loginRouter)
 
 
     app.listen(PORT, () => console.log(`http://localhost:${PORT}`))
